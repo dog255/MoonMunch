@@ -1,1 +1,165 @@
 
+:root {
+  --lime: #d9ff6b;
+  --pink: #ff76c8;
+  --dark: #101329;
+  --panel: #202544;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  min-height: 100vh;
+  color: white;
+  font-family: system-ui, Arial, sans-serif;
+  background: radial-gradient(
+    ellipse at top,
+    #34305c,
+    #101329 70%
+  );
+}
+
+main {
+  width: min(950px, 100%);
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  color: var(--lime);
+  letter-spacing: 3px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.stats,
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stat,
+.panel {
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid #47476b;
+}
+
+.stat small {
+  display: block;
+  color: #b9bddc;
+}
+
+button,
+select {
+  border: 1px solid #696b98;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: var(--panel);
+  color: white;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+.primary {
+  background: var(--lime);
+  color: #17192a;
+  border: 0;
+}
+
+.panel {
+  margin: 12px 0;
+}
+
+select {
+  max-width: 100%;
+}
+
+#game {
+  overflow: hidden;
+  border: 2px solid #7770a6;
+  border-radius: 16px;
+  background: #15172d;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+#message {
+  color: var(--lime);
+  min-height: 25px;
+  font-weight: bold;
+}
+
+#bossHealth {
+  height: 12px;
+  background: #3b203a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+#bossBar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #ff4f83,
+    #ffb56b
+  );
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mobile-controls {
+  margin-top: 12px;
+}
+
+@media (max-width: 550px) {
+  body {
+    padding: 8px;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  .stat {
+    padding: 8px;
+  }
+
+  button {
+    padding: 9px 11px;
+  }
+}
