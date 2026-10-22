@@ -1,2 +1,87 @@
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moon Munch</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>🌙 MOON MUNCH</h1>
+      <div class="stats">
+        <div class="stat">
+          <small>Coins</small>
+          <b id="coins">0</b>
+        </div>
+        <div class="stat">
+          <small>World</small>
+          <b id="world">1</b>
+        </div>
+        <div class="stat">
+          <small>Health</small>
+          <b id="health">100</b>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel" id="menu">
+      <h2>Choose your character</h2>
+      <select id="character">
+        <option value="🐻">Bear</option>
+        <option value="🦅">Eagle</option>
+        <option value="🐯">Tiger</option>
+        <option value="🦁">Lion</option>
+        <option value="🦄">Unicorn</option>
+        <option value="🐼">Red Panda</option>
+        <option value="🦉">Owl</option>
+        <option value="🐬">Dolphin</option>
+        <option value="🐧">Penguin</option>
+        <option value="🐉">Dragon</option>
+        <option value="🦊">Fox</option>
+        <option value="🐈‍⬛">Black Panther</option>
+      </select>
+
+      <div class="controls">
+        <button id="play" class="primary">▶ PLAY</button>
+        <button id="upgrade">⬆ Upgrade (25 coins)</button>
+        <button id="reset">Reset Save</button>
+      </div>
+      <p>Use WASD or the arrow keys to move.</p>
+      <p>Collect fruit, avoid enemies, and defeat bosses!</p>
+    </section>
+
+    <section class="panel">
+      <div id="message">Ready for an adventure?</div>
+      <div id="bossInfo" class="hidden">
+        <b id="bossName">Boss Battle</b>
+        <div id="bossHealth">
+          <div id="bossBar"></div>
+        </div>
+        <p>Press SPACE or SHOOT to attack.</p>
+      </div>
+    </section>
+
+    <section id="game">
+      <canvas id="canvas" width="900" height="600"></canvas>
+    </section>
+
+    <div class="controls mobile-controls">
+      <button id="left">⬅</button>
+      <button id="up">⬆</button>
+      <button id="down">⬇</button>
+      <button id="right">➡</button>
+      <button id="shoot" class="primary">🔫 SHOOT</button>
+    </div>
+
+    <section class="panel">
+      <h2>How to Play</h2>
+      <p>Collect fruit for coins and avoid the Moon Munch creatures.</p>
+      <p>Every three nights, a boss appears. Defeat it to unlock the next world.</p>
+      <p>Your progress is saved in this browser.</p>
+    </section>
+  </main>
+</body>
+</html>
