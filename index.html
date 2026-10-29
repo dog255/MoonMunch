@@ -77,6 +77,37 @@ const canvas=document.getElementById('game'),ctx=canvas.getContext('2d'),W=canva
 const rand=(a,b)=>Math.random()*(b-a)+a,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const planets=[{name:'MOON GARDEN',bg:'#15172d',hill:'#202542',accent:'#d9ff6b'},{name:'NEBULA WILDS',bg:'#301b43',hill:'#4d2856',accent:'#ff76c8'},{name:'CRYSTAL UNIVERSE',bg:'#102a3d',hill:'#174357',accent:'#7be7ff'}];
 const bossInfo=[
+ const ART_URLS={
+  boss_core:"images/boss_core.webp",
+  comet_pup:"images/comet_pup.png",
+  solar_phoenix:"images/solar_phoenix.png",
+  shadow_panther:"images/shadow_panther.webp",
+  blaster_light:"images/blaster_light.webp",
+  tiger:"images/tiger.png",
+  nebula_fox:"images/nebula_fox.png",
+  panther:"images/panther.png",
+  moon_turtle:"images/moon_turtle.webp",
+  red_panda:"images/red_panda.png",
+  moon_muncher:"images/moon_muncher.webp",
+  eagle:"images/eagle.png",
+  boss_behemoth:"images/boss_behemoth.webp",
+  star_hawk:"images/star_hawk.webp",
+  dragon:"images/dragon.png",
+  lunar_wolf:"images/lunar_wolf.webp",
+  boss_leviathan:"images/boss_leviathan.webp",
+  rock_golem:"images/rock_golem.webp",
+  penguin:"images/penguin.png",
+  crystal_dragon:"images/crystal_dragon.png",
+  blaster_starter:"images/blaster_starter.webp",
+  owl:"images/owl.png",
+  blaster_ultra:"images/blaster_ultra.webp",
+  blaster_blast:"images/blaster_blast.webp",
+  lion:"images/lion.png",
+  dolphin:"images/dolphin.png",
+  fox:"images/fox.png",
+  bear:"images/bear.png",
+  unicorn:"images/unicorn.png"
+};
 {name:'SLUG TITAN',hp:3000,r:42,speed:58,fire:1.05,bullet:190,color:'#c74b85',glow:'#ff4f83'},
 {name:'NEBULA BEHEMOTH',hp:3500,r:52,speed:84,fire:.72,bullet:235,color:'#7b42b7',glow:'#c57bff'},
 {name:'COSMIC CORE',hp:6500,r:45,speed:112,fire:.48,bullet:285,color:'#277fba',glow:'#54eaff'}
